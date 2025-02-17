@@ -1,0 +1,18 @@
+[Unit]
+Description=EPD Node Service
+After=network.target
+
+[Service]
+ExecStart=/home/tobias/.nvm/versions/node/v22.14.0/bin/npm start
+WorkingDirectory=/home/tobias/epd-node
+Environment=NODE_ENV=production
+Environment=PATH=/home/tobias/.nvm/versions/node/v22.14.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+Restart=always
+User=tobias
+Group=tobias
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=epd-node
+
+[Install]
+WantedBy=multi-user.target

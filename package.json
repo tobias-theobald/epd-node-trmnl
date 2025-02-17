@@ -1,0 +1,23 @@
+{
+  "name": "epd-trmnl",
+  "version": "1.0.0",
+  "main": "src/app.ts",
+  "type": "module",
+  "scripts": {
+    "start": "tsx --env-file .env src/app.ts",
+    "start:example": "tsx --env-file .env src/examples/epd7in5v2test.ts"
+  },
+  "author": "Tobias Theobald <https://github.com/tobias-theobald/>",
+  "license": "MIT",
+  "description": "Node.js program to render your trmnl screen to your waveshare 7.5\" V2 e-ink display on a raspberry pi",
+  "dependencies": {
+    "jimp": "^1.6.0",
+    "lgpio": "^1.0.6",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  }
+}
